@@ -3457,3 +3457,7 @@ details-disclosure > details {
 product-info span.price-item--regular{
   color: red;
 }
+#product-grid .grid__item{
+  padding: 1em;
+  border: 1px solid #000;
+}
