@@ -453,7 +453,7 @@
 </cart-items>
 <script>
   document.getElementById("clear_cart").addEventListener("click", function(e){
-    fetch(window.Shopify.routes.root + 'cart/add.js', {
+    fetch(window.Shopify.routes.root + 'cart/clear.js', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
