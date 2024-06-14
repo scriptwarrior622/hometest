@@ -753,7 +753,7 @@
 </section>
 <script>
 var el_extra_info = document.querySelector(".product__extra_info");
-if(el_extra_info && el_extra_info.offsetHeight > 50){
+if(el_extra_info && el_extra_info.offsetHeight > 100){
   el_extra_info.classList.add("extra_hide");
   var el_show_more = document.createElement("span");
   el_show_more.classList.add("el_extra", "show_more");
@@ -776,7 +776,7 @@ if(el_extra_info && el_extra_info.offsetHeight > 50){
 </script>
 <style>
 .product__extra_info.extra_hide{
-  max-height: 50px;
+  max-height: 100px;
   overflow: hidden;
 }
 .el_extra{
