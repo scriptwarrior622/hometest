@@ -641,10 +641,10 @@
               {%- when 'icon-with-text' -%}
                 {% render 'icon-with-text', block: block %}
               {%- when 'extra_info' -%}
-                {% if block.settings.extra_info %}
+                {% if block.settings.info %}
                 <h3>Extra Information</h3>
                 <p class="product__text">
-                  {{ block.settings.extra_info }}
+                  {{ block.settings.info }}
                 </p>
                 {% endif %}
             {%- endcase -%}
