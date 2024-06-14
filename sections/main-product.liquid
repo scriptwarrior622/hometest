@@ -755,7 +755,8 @@
 var el_extra_info = document.querySelector(".product__extra_info");
 if(el_extra_info && el_extra_info.offsetHeight > 50){
   el_extra_info.classList.add("extra_hide");
-  var el_show_more = document.createElement("span").classList.add("el_extra", "show_more");
+  var el_show_more = document.createElement("span");
+  el_show_more.classList.add("el_extra", "show_more");
   el_show_more.text("Show More");
   el_extra_info.insertAdjacentElement("afterend", el_show_more);
 
