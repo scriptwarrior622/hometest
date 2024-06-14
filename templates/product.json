@@ -44,16 +44,16 @@
           "settings": {
           }
         },
-        "extra_info_xM3nfa": {
-          "type": "extra_info",
-          "settings": {
-            "info": "<p>Extra info<\/p>"
-          }
-        },
         "share": {
           "type": "share",
           "settings": {
             "share_label": "Share"
+          }
+        },
+        "extra_info_3TjNTe": {
+          "type": "extra_info",
+          "settings": {
+            "info": ""
           }
         }
       },
@@ -65,8 +65,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "extra_info_xM3nfa",
-        "share"
+        "share",
+        "extra_info_3TjNTe"
       ],
       "settings": {
         "enable_sticky_info": true,
