@@ -757,16 +757,16 @@ if(el_extra_info && el_extra_info.offsetHeight > 50){
   el_extra_info.classList.add("extra_hide");
   var el_show_more = document.createElement("span");
   el_show_more.classList.add("el_extra", "show_more");
-  el_show_more.text("Show More");
+  el_show_more.innerText = "Show More";
   el_extra_info.insertAdjacentElement("afterend", el_show_more);
 
   el_show_more.addEventListener("click", function(){
     if(el_show_more.classList.contains("show_more")){
-      el_show_more.text("Show Less");
+      el_show_more.innerText = "Show Less";
       el_extra_info.classList.remove("extra_hide");
       el_show_more.classList.remove("show_more").add("show_less");
     }else{
-      el_show_more.text("Show More");
+      el_show_more.innerText = "Show More";
       el_extra_info.classList.add("extra_hide");
       el_show_more.classList.add("show_more").remove("show_less");
     }
