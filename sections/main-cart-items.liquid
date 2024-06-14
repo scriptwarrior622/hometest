@@ -452,6 +452,7 @@
   </div>
 </cart-items>
 <script>
+  //Add the click event for the clear cart button
   document.getElementById("clear_cart").addEventListener("click", function(e){
     fetch(window.Shopify.routes.root + 'cart/clear.js', {
       method: 'POST',
@@ -461,6 +462,7 @@
     })
     .then(response => {
       console.log(response);
+      location.reload();/* Reload the page after cleared the cart contents. */
       return response.json();
     })
     .catch((error) => {
