@@ -643,9 +643,9 @@
               {%- when 'extra_info' -%}
                 {% if block.settings.info %}
                 <h3>Extra Information</h3>
-                <p class="product__text">
+                <div class="product__text product__extra_info">
                   {{ block.settings.info }}
-                </p>
+                </div>
                 {% endif %}
             {%- endcase -%}
           {%- endfor -%}
@@ -751,7 +751,33 @@
     </script>
   </div>
 </section>
+<script>
+var el_extra_info = document.querySelector(".product__extra_info");
+if(el_extra_info && el_extra_info.offsetHeight > 50){
+  el_extra_info.classList.add("extra_hide");
+  var el_show_more = document.createElement("span").classList.add("el_extra show_more");
+  el_show_more.text("Show More");
+  el_extra_info.insertAdjacentElement("afterend", el_show_more);
 
+  el_show_more.addEventListener("click", function(){
+    if(el_show_more.classList.contains("show_more")){
+      el_show_more.text("Show Less");
+      el_extra_info.classList.remove("extra_hide");
+      el_show_more.classList.remove("show_more").add("show_less");
+    }else{
+      el_show_more.text("Show More");
+      el_extra_info.classList.add("extra_hide");
+      el_show_more.classList.add("show_more").remove("show_less");
+    }
+  })
+}
+
+</script>
+<style>
+.product__extra_info.extra_hide{
+  max-height: 50px;
+}
+</style>
 {% schema %}
 {
   "name": "t:sections.main-product.name",
